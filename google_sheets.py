@@ -1,7 +1,7 @@
 import pygsheets
 import pandas as pd
 #authorization
-gc = pygsheets.authorize(service_file='C:\Users\andy8\Downloads\serious-unison-439914-c7-695430c44d35.json')
+gc = pygsheets.authorize(service_file=r'C:\Users\andy8\Downloads\serious-unison-439914-c7-695430c44d35.json')
 
 # Create empty dataframe
 df = pd.DataFrame()
