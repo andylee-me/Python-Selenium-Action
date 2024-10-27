@@ -52,7 +52,7 @@ driver = webdriver.Chrome(options = chrome_options)
 #with open('./GitHub_Action_Results.txt', 'w') as f:
 #    f.write(f"This was written with a GitHub action {driver.title}")
 
-driver.get('https://www.twse.com.tw/zh/announcement/auction.html')
+driver.get('https://www.twse.com.tw/zh/announcement/public.html')
 time.sleep(2)
 element = driver.find_element(by=By.CLASS_NAME, value="csv")
 element.click()
