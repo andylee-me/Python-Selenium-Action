@@ -34,4 +34,5 @@ jobs:
          git push
 
       - name: Running the Python script
-        run: python google_sheet.py | put auction.csv into google_sheet
+        run: 
+          python google_sheets.py | put auction.csv into google_sheet
