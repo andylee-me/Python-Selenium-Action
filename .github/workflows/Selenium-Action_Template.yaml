@@ -32,3 +32,6 @@ jobs:
          git add -A
          git commit -m "GitHub Actions Results added"
          git push
+
+      - name: Running the Python script
+        run: python google_sheet.py | put auction.csv into google_sheet
