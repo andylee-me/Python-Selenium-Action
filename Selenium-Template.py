@@ -64,11 +64,11 @@ time.sleep(2)
 #driver.get_screenshot_as_file("page1.png")
 getDownLoadedFileNameClose()
 DownloadedFilename=''.join(latestDownloadedFileName).encode().decode("utf-8")
-
+print(auction.csv[0][0],"\n\n\n\n\n\n\n\n\n\n\n\n\nAAAAAAAAAAAAAAAAAAAAAAAAAAAA\n\n\n\n\n\n\n\n\n\n\n")
 if DownloadedFilename != "auction.csv":
     # Copy the file to "auction.csv"
     shutil.copy(DownloadedFilename, "auction.csv")
-    print(auction.csv[0][0])
+    print(auction.csv[0][0],"\n\n\n\n\n\n\n\n\n\n\n\n\nAAAAAAAAAAAAAAAAAAAAAAAAAAAA\n\n\n\n\n\n\n\n\n\n\n")
     print(f"File '{DownloadedFilename}' copied to 'auction.csv'.")
     # Delete the original downloaded file
     os.remove(DownloadedFilename)
