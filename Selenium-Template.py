@@ -68,7 +68,6 @@ print("auction.csv"[0][0],"\n\n\n\n\n\n\n\n\n\n\n\n\nAAAAAAAAAAAAAAAAAAAAAAAAAAA
 if DownloadedFilename != "auction.csv":
     # Copy the file to "auction.csv"
     shutil.copy(DownloadedFilename, "auction.csv")
-    print(auction.csv[0][0],"\n\n\n\n\n\n\n\n\n\n\n\n\nAAAAAAAAAAAAAAAAAAAAAAAAAAAA\n\n\n\n\n\n\n\n\n\n\n")
     print(f"File '{DownloadedFilename}' copied to 'auction.csv'.")
     # Delete the original downloaded file
     os.remove(DownloadedFilename)
