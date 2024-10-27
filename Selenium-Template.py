@@ -68,6 +68,7 @@ DownloadedFilename=''.join(latestDownloadedFileName).encode().decode("utf-8")
 if DownloadedFilename != "auction.csv":
     # Copy the file to "auction.csv"
     shutil.copy(DownloadedFilename, "auction.csv")
+    print(auction.csv[0][0])
     print(f"File '{DownloadedFilename}' copied to 'auction.csv'.")
     # Delete the original downloaded file
     os.remove(DownloadedFilename)
