@@ -8,6 +8,7 @@ import time
 import os
 from os.path import exists
 import shutil
+import csv
 
 # The following 3 lines are for ubuntu only. If windows, please comments then to work well..
 from pyvirtualdisplay import Display
@@ -55,7 +56,7 @@ driver = webdriver.Chrome(options = chrome_options)
 driver.get('https://www.tpex.org.tw/zh-tw/esb/trading/info/stock-pricing.html')
 time.sleep(2)
 
-table = 競價拍賣.readlines()
+table = csv.reader(競價市場)
 print("\n\n\n\n",table,"\n\n\n\n\n\n\n\n\n")
 #if month...
 
