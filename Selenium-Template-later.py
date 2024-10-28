@@ -76,14 +76,20 @@ for j in range(0,2):
         element.send_keys(code_send)
         time.sleep(0.5)
     
-        month = list(map(int,list(code["撥券日期(上市、上櫃日期)"])))
-        if month[i] == 12 and j == 1:
-            month[i] -= 12
-        select = Select(month[i])
+        month = list(code["撥券日期(上市、上櫃日期)"])
 
-        select.select_by_index(month[i]+j)
-    
-      
+        #tiding
+        month_pass = ""
+        for k in range(0,code.shape[0]):
+            month_pass = month_pass+month[k]+"/"
+        month = month_pass.split("/")
+
+        if month[1+i*3] == 1 and j == 1:
+            month[1+i*3] += 12
+        s = driver.find_element_by_id("select-month")
+        Select(s).select_by_index(month[1+i*3]-j-1)
+
+
         element = driver.find_element(by=By.CLASS_NAME, value="response")
         element.click()
         time.sleep(2)
