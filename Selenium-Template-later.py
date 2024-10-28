@@ -55,6 +55,8 @@ driver = webdriver.Chrome(options = chrome_options)
 driver.get('https://www.tpex.org.tw/zh-tw/esb/trading/info/stock-pricing.html')
 time.sleep(2)
 
+table = "競價拍賣-2024 - 上櫃專注股.csv".readlines()
+print("\n\n\n\n",table,"\n\n\n\n\n\n\n\n\n")
 #if month...
 
 element = driver.find_element(by=By.CLASS_NAME, value="code")
