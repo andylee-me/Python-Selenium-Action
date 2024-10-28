@@ -56,8 +56,10 @@ driver = webdriver.Chrome(options = chrome_options)
 driver.get('https://www.tpex.org.tw/zh-tw/esb/trading/info/stock-pricing.html')
 time.sleep(2)
 
-table = open('競價拍賣.csv', 'r').encode().decode("utf-8")
-print(table)
+#read google-sheets
+url = "https://raw.githubusercontent.com/andylee-me/Python-Selenium-Action/main/%E7%AB%B6%E5%83%B9%E6%8B%8D%E8%B3%A3.csv"
+df = pd.read_csv(url, index_col=0)
+print("\n\n",df,"\n\n")
   
   #if month...
 
