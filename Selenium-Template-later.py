@@ -60,7 +60,7 @@ time.sleep(2)
 element = driver.find_element(by=By.CLASS_NAME, value="code")
 element.click()
 element.send_keys(['8','2','7','2'])
-element = driver.find_element(by=By.CLASS_NAME, value="csv")
+element = driver.find_element(by=By.CLASS_NAME, value="response")
 element.click()
 
 
