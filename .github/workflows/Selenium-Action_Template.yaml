@@ -22,8 +22,8 @@ jobs:
       - name: Install xvfb
         run: sudo apt-get install xvfb
 
-#      - name: Running the Python script
-#        run: python Selenium-Template.py | more auction.csv  
+      - name: Running the Python script
+        run: python Selenium-Template.py | more auction.csv  
 
       - name: Running the Python script-2
         run: python Selenium-Template-later.py | more OTC.csv
