@@ -32,7 +32,4 @@ jobs:
          git add -A
          git commit -m "GitHub Actions Results added"
          git push
-      - name: import pyg
-        run: pip install https://github.com/nithinmurali/pygsheets/archive/staging.zip
-      - name: Running the Python script
-        run: python google_sheets.py | put auction.csv into google_sheet
+         
