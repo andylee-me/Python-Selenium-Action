@@ -77,10 +77,11 @@ for j in range(0,2):
         time.sleep(0.5)
     
         month = list(code["撥券日期(上市、上櫃日期)"])
-        
         if month[i] == 12 and j == 1:
             month[i] -= 12
-        Select.select_by_index(month[i]+j)
+        select = Select(month[i])
+
+        select.select_by_index(month[i]+j)
     
       
         element = driver.find_element(by=By.CLASS_NAME, value="response")
