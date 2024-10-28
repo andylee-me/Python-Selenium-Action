@@ -1,4 +1,5 @@
 from selenium import webdriver
+from selenium.webdriver.support.ui import Select
 from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.chrome.service import Service
@@ -79,7 +80,7 @@ for j in range(0,2):
         
         if month[i] == 12 and j == 1:
             month[i] -= 12
-        select.select_by_index(month[i]+j)
+        Select.select_by_index(month[i]+j)
     
       
         element = driver.find_element(by=By.CLASS_NAME, value="response")
