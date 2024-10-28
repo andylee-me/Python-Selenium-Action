@@ -21,6 +21,8 @@ jobs:
         run: pip install chromedriver-autoinstaller selenium pyvirtualdisplay
       - name: Install xvfb
         run: sudo apt-get install xvfb
+      - name: Install pandas
+        run: pip install pandas
 
       - name: Running the Python script
         run: python Selenium-Template.py | more auction.csv  
