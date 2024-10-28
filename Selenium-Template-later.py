@@ -57,8 +57,10 @@ driver.get('https://www.tpex.org.tw/zh-tw/esb/trading/info/stock-pricing.html')
 time.sleep(2)
 
 table = csv.reader("競價拍賣.csv")
-print("\n\n\n\n",table,"\n\n\n\n\n\n\n\n\n")
-#if month...
+for ininn in table:
+  print(ininn)
+  
+  #if month...
 
 element = driver.find_element(by=By.CLASS_NAME, value="code")
 element.click()
