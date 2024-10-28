@@ -60,31 +60,33 @@ time.sleep(2)
 #read google-sheets
 url = "https://raw.githubusercontent.com/andylee-me/Python-Selenium-Action/main/%E7%AB%B6%E5%83%B9%E6%8B%8D%E8%B3%A3.csv"
 code = pd.read_csv(url)
+
 print("這是證券代號:",code["證券代號"][0],"\n\n\n\n\n\n")
 
 
 
   #if month...
 
-element = driver.find_element(by=By.CLASS_NAME, value="code")
-element.click()
-element.send_keys(['8','2','7','2'])
-time.sleep(0.5)
-element = driver.find_element(by=By.CLASS_NAME, value="response")
-element.click()
-time.sleep(2)
-
-#driver.get_screenshot_as_file("page.png")
-latestDownloadedFileName = getDownLoadedFileName() 
-time.sleep(2)
-#driver.get_screenshot_as_file("page1.png")
-getDownLoadedFileNameClose()
-DownloadedFilename=''.join(latestDownloadedFileName).encode().decode("utf-8")
-if DownloadedFilename != "OTC.csv":
-    # Copy the file to "OTC.csv"
-    shutil.copy(DownloadedFilename, "OTC.csv")
-    print(f"File '{DownloadedFilename}' copied to 'OTC.csv'.")
-    # Delete the original downloaded file
-    os.remove(DownloadedFilename)
-    print("Download completed...",downloadDir+'OTC.csv')
+for i in range(0,code.shape[0]):
+    element = driver.find_element(by=By.CLASS_NAME, value="code")
+    element.click()
+    element.send_keys(code["證券代號"][i])
+    time.sleep(0.5)
+    element = driver.find_element(by=By.CLASS_NAME, value="response")
+    element.click()
+    time.sleep(2)
+    
+    #driver.get_screenshot_as_file("page.png")
+    latestDownloadedFileName = getDownLoadedFileName() 
+    time.sleep(2)
+    #driver.get_screenshot_as_file("page1.png")
+    getDownLoadedFileNameClose()
+    DownloadedFilename=''.join(latestDownloadedFileName).encode().decode("utf-8")
+    if DownloadedFilename != "OTC.csv":
+        # Copy the file to "OTC.csv"
+        shutil.copy(DownloadedFilename, "OTC.csv")
+        print(f"File '{DownloadedFilename}' copied to 'OTC.csv'.")
+      # Delete the original downloaded file
+      os.remove(DownloadedFilename)
+      print("Download completed...",downloadDir+'OTC.csv')
 
