@@ -56,7 +56,7 @@ driver = webdriver.Chrome(options = chrome_options)
 driver.get('https://www.tpex.org.tw/zh-tw/esb/trading/info/stock-pricing.html')
 time.sleep(2)
 
-table = open('競價拍賣.csv', 'r')
+table = open('競價拍賣.csv', 'r').encode().decode("utf-8")
 print(table)
   
   #if month...
