@@ -66,7 +66,7 @@ print("這是證券代號:",code["證券代號"][0],"\n\n\n\n\n\n")
 
 
   #if month...
-
+print("\n\nthisis codeshape",code.shape[0],"\n\n")
 for i in range(0,code.shape[0]):
     element = driver.find_element(by=By.CLASS_NAME, value="code")
     element.click()
