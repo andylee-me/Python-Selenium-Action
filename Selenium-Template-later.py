@@ -57,8 +57,13 @@ time.sleep(2)
 
 #if month...
 
+element = driver.find_element(by=By.CLASS_NAME, value="auto2.code")
+element.click()
+elements.send_keys("8272")
 element = driver.find_element(by=By.CLASS_NAME, value="csv")
 element.click()
+
+
 time.sleep(2)
 
 #driver.get_screenshot_as_file("page.png")
