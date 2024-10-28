@@ -60,7 +60,9 @@ time.sleep(2)
 #read google-sheets
 url = "https://raw.githubusercontent.com/andylee-me/Python-Selenium-Action/main/%E7%AB%B6%E5%83%B9%E6%8B%8D%E8%B3%A3.csv"
 code = pd.read_csv(url, index_col=0)
-print("\n\n",code,"\n\n")
+code = "["+code+"]"
+code = code.split(",")
+print("\n\n",code[0],"\n\n")
   
   #if month...
 
