@@ -83,6 +83,7 @@ for j in range(0,2):
         for k in range(0,code.shape[0]):
             month_pass = month_pass+month[k]+"/"
         month = month_pass.split("/")
+        month.pop(-1)
 
         month = list(map(int,month))
 
