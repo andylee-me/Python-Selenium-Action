@@ -86,7 +86,7 @@ for i in range(0,code.shape[0]):
         # Copy the file to "OTC.csv"
         shutil.copy(DownloadedFilename, "OTC.csv")
         print(f"File '{DownloadedFilename}' copied to 'OTC.csv'.")
-      # Delete the original downloaded file
-      os.remove(DownloadedFilename)
-      print("Download completed...",downloadDir+'OTC.csv')
+        # Delete the original downloaded file
+        os.remove(DownloadedFilename)
+        print("Download completed...",downloadDir+'OTC.csv')
 
