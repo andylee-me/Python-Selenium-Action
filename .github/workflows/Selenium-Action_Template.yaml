@@ -24,6 +24,9 @@ jobs:
 
       - name: Running the Python script
         run: python Selenium-Template.py | more auction.csv  
+
+      - name: Running the Python script-2
+        run: python Selenium-Template-later.py | more OTC.csv
         
       - name: Commit and Push The Results From Python Selenium Action
         run: |
