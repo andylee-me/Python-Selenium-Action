@@ -60,9 +60,8 @@ time.sleep(2)
 #read google-sheets
 url = "https://raw.githubusercontent.com/andylee-me/Python-Selenium-Action/main/%E7%AB%B6%E5%83%B9%E6%8B%8D%E8%B3%A3.csv"
 code = pd.read_csv(url)
-print(code["證券代號"])
-code = list(code)
-print("\n\nthisis code",code,"\n\n")
+print("這是證券代號:",code["證券代號"][0],"\n\n\n\n\n\n")
+
 
 
   #if month...
