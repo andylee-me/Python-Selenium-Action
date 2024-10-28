@@ -59,18 +59,17 @@ time.sleep(2)
 
 #read google-sheets
 url = "https://raw.githubusercontent.com/andylee-me/Python-Selenium-Action/main/%E7%AB%B6%E5%83%B9%E6%8B%8D%E8%B3%A3.csv"
-df = pd.read_csv(url, index_col=0)
-print("\n\n",df,"\n\n")
+code = pd.read_csv(url, index_col=0)
+print("\n\n",code[1][0],"\n\n")
   
   #if month...
 
 element = driver.find_element(by=By.CLASS_NAME, value="code")
 element.click()
 element.send_keys(['8','2','7','2'])
+time.sleep(0.5)
 element = driver.find_element(by=By.CLASS_NAME, value="response")
 element.click()
-
-
 time.sleep(2)
 
 #driver.get_screenshot_as_file("page.png")
@@ -85,6 +84,5 @@ if DownloadedFilename != "OTC.csv":
     print(f"File '{DownloadedFilename}' copied to 'OTC.csv'.")
     # Delete the original downloaded file
     os.remove(DownloadedFilename)
-
-print("Download completed...",downloadDir+'OTC.csv')
+    print("Download completed...",downloadDir+'OTC.csv')
 
