@@ -63,7 +63,7 @@ code = pd.read_csv(url)
 code.head()
 code = list(code)
 print("\n\nthisis code",code,"\n\n")
-print("\n\n",code[1][0],"\n\n")
+print(code["證券代號"])
 
   #if month...
 
