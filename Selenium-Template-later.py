@@ -57,7 +57,7 @@ time.sleep(2)
 
 #if month...
 
-element = driver.find_element(by=By.CLASS_NAME, value="auto2.code")
+element = driver.find_element(by=By.CLASS_NAME, value="auto2")
 element.click()
 elements.send_keys("8272")
 element = driver.find_element(by=By.CLASS_NAME, value="csv")
