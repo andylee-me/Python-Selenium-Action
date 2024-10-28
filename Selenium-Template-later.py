@@ -76,7 +76,7 @@ for j in range(0,2):
         element.send_keys(code_send)
         time.sleep(0.5)
     
-        month = list(code["撥券日期(上市、上櫃日期)"])
+        month = list(map(int,list(code["撥券日期(上市、上櫃日期)"])))
         if month[i] == 12 and j == 1:
             month[i] -= 12
         select = Select(month[i])
