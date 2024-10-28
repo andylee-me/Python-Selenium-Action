@@ -84,6 +84,8 @@ for j in range(0,2):
             month_pass = month_pass+month[k]+"/"
         month = month_pass.split("/")
 
+        month = list(map(int,month))
+
         if month[1+i*3] == 1 and j == 1:
             month[1+i*3] += 12
         s = driver.find_element(by=By.CLASS_NAME, value="select-month")
