@@ -86,7 +86,7 @@ for j in range(0,2):
 
         if month[1+i*3] == 1 and j == 1:
             month[1+i*3] += 12
-        s = driver.find_element_by_id("select-month")
+        s = driver.find_element(by=By.CLASS_NAME, value="select-month")
         Select(s).select_by_index(month[1+i*3]-j-1)
 
 
