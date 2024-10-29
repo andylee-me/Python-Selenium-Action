@@ -108,7 +108,7 @@ for j in range(0,2):
         DownloadedFilename=''.join(latestDownloadedFileName).encode().decode("utf-8")
 
         print("\n\nThisis DownloadedFilename:",DownloadedFilename,"\n\n")
-        df = DownloadedFilename
+        df = list(DownloadedFilename)
         filename = code["撥券日期(上市、上櫃日期)"]+".csv"
         df.to_csv(filename, index=False)
         print(f"{filename} 已成功生成！")
