@@ -5,6 +5,7 @@ from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.chrome.service import Service
 import chromedriver_autoinstaller
 
+from pathlib import Path
 import pandas as pd
 import time
 import os
@@ -112,4 +113,8 @@ for j in range(0,2):
             # Delete the original downloaded file
             os.remove(DownloadedFilename)
             print("Download completed...",downloadDir+'OTC.csv')
-    
+    from pathlib import Path
+
+myfile = Path("https://github.com/andylee-me/Python-Selenium-Action/2024-"+code_send)
+myfile.touch(exist_ok=True)
+f = open(myfile)
