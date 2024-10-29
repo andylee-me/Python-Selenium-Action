@@ -118,12 +118,11 @@ for j in range(0,2):
             # Copy the file to "OTC.csv"
             shutil.copy(DownloadedFilename, "OTC.csv")
             print(f"File '{DownloadedFilename}' copied to 'OTC.csv'.")
-            # Delete the original downloaded file
-            os.remove(DownloadedFilename)
             print("Download completed...",downloadDir+'OTC.csv')
             df_csv = pd.read_csv('OTC.csv', index_col=0)
             filename = code["撥券日期(上市、上櫃日期)"]+".csv"
             df_csv.to_csv(filename,index = False)
             print(f"{filename} 已成功生成！")
-
+            os.remove(DownloadedFilename)
+            # Delete the original downloaded file
   
