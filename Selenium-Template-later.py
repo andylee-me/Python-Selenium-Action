@@ -106,6 +106,13 @@ for j in range(0,2):
         #driver.get_screenshot_as_file("page1.png")
         getDownLoadedFileNameClose()
         DownloadedFilename=''.join(latestDownloadedFileName).encode().decode("utf-8")
+
+      
+        df = pd.DataFrame(DownloadedFilename)
+        filename = code["撥券日期(上市、上櫃日期)"]+".csv"
+        df.to_csv(filename, index=False)
+        print(f"{filename} 已成功生成！")
+      
         if DownloadedFilename != "OTC.csv":
             # Copy the file to "OTC.csv"
             shutil.copy(DownloadedFilename, "OTC.csv")
@@ -113,8 +120,3 @@ for j in range(0,2):
             # Delete the original downloaded file
             os.remove(DownloadedFilename)
             print("Download completed...",downloadDir+'OTC.csv')
-    from pathlib import Path
-
-myfile = Path("https://github.com/andylee-me/Python-Selenium-Action/2024-"+code_send)
-myfile.touch(exist_ok=True)
-f = open(myfile)
