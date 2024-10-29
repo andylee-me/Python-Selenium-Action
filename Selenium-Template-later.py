@@ -107,8 +107,9 @@ for j in range(0,2):
         getDownLoadedFileNameClose()
         DownloadedFilename=''.join(latestDownloadedFileName).encode().decode("utf-8")
 
+      
+        df = pd.DataFrame(data, columns=['A','b','c'])
         print("\n\nThisis DownloadedFilename:",DownloadedFilename,"\n\n")
-        df = list(DownloadedFilename)
         filename = code["撥券日期(上市、上櫃日期)"]+".csv"
         df.to_csv(filename, index=False)
         print(f"{filename} 已成功生成！")
