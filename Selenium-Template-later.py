@@ -14,9 +14,9 @@ import shutil
 import csv
 
 # The following 3 lines are for ubuntu only. If windows, please comments then to work well..
-from pyvirtualdisplay import Display
-display = Display(visible=0, size=(800, 800))  
-display.start()
+#from pyvirtualdisplay import Display
+#display = Display(visible=0, size=(800, 800))  
+#display.start()
 
 chromedriver_autoinstaller.install()  # Check if the current version of chromedriver exists
 #                                      # and if it doesn't exist, download it automatically,
