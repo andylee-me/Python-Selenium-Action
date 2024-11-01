@@ -79,7 +79,6 @@ for j in range(0,2):
             month_pass = month_pass+month[k]+"/"
         month = month_pass.split("/")
         month.pop(-1)
-
         month = list(map(int,month))
 
         if month[1+i*3] == 1 and j == 1:
@@ -88,7 +87,6 @@ for j in range(0,2):
             Select(s).select_by_index(1)
         s = driver.find_element(by=By.CLASS_NAME, value="select-month")
         Select(s).select_by_index(month[1+i*3]-j-1)
-
 
         element = driver.find_element(by=By.CLASS_NAME, value="response")
         element.click()
@@ -107,5 +105,5 @@ for j in range(0,2):
             print(f"File '{DownloadedFilename}' copied to 'OTC.csv'.")
             print("Download completed...",downloadDir+'OTC.csv')
             os.remove(DownloadedFilename)
-            
+
   
