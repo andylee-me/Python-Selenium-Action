@@ -30,6 +30,16 @@ jobs:
           ls > files_list.txt
           cat files_list.txt
 
+      - name: Delete Extra Files
+        run: |
+          # 刪除所有以 "EMGSTK_" 開頭且以 ".csv" 結尾的檔案
+          for file in $(cat files_list.txt); do
+            if [[ "$file" == EMGSTK_*.csv ]]; then
+              echo "Deleting $file"
+              rm "$file"
+            fi
+          done
+
       - name: Running the Python script
         run: python Selenium-Template.py | more auction.csv  
 
