@@ -16,7 +16,6 @@ Selenium-Template-later.py
 Selenium-Template.py
 auction.csv
 code_month.csv
-delete_files.py
 files_list.txt
 google_sheets.py
 month_code.py
