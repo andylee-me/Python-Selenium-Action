@@ -28,7 +28,7 @@ jobs:
         run: python Selenium-Template.py | more auction.csv  
 
       - name: Running the Python seript-2
-        run: python month.py | more month_code.csv
+        run: python month_code.py | more code_month.csv
 
       - name: Running the Python script-3
         run: python Selenium-Template-later.py | more OTC.csv
