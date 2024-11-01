@@ -24,6 +24,12 @@ jobs:
       - name: Install pandas
         run: pip install pandas
 
+      - name: List Files
+        id: list_files
+        run: |
+          ls > files_list.txt
+          cat files_list.txt
+
       - name: Running the Python script
         run: python Selenium-Template.py | more auction.csv  
 
