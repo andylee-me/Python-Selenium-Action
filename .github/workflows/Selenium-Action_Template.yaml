@@ -27,8 +27,13 @@ jobs:
       - name: Running the Python script
         run: python Selenium-Template.py | more auction.csv  
 
-      - name: Running the Python script-2
+      - name: Running the Python seript-2
+        run: python month.py | more month_code.csv
+
+      - name: Running the Python script-3
         run: python Selenium-Template-later.py | more OTC.csv
+
+
         
       - name: Commit and Push The Results From Python Selenium Action
         run: |
