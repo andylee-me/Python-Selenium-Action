@@ -63,12 +63,6 @@ time.sleep(2)
 url = "https://raw.githubusercontent.com/andylee-me/Python-Selenium-Action/main/%E7%AB%B6%E5%83%B9%E6%8B%8D%E8%B3%A3.csv"
 code = pd.read_csv(url)
 
-print("這是證券代號:",code["證券代號"][0],"\n\n\n\n\n\n")
-
-
-
-  #if month...
-print("\n\nthisis codeshape",code.shape[0],"\n\n")
 for j in range(0,2):
     for i in range(0,code.shape[0]):
         element = driver.find_element(by=By.CLASS_NAME, value="code")
@@ -106,13 +100,6 @@ for j in range(0,2):
         #driver.get_screenshot_as_file("page1.png")
         getDownLoadedFileNameClose()
         DownloadedFilename=''.join(latestDownloadedFileName).encode().decode("utf-8")
-
-        """DownloadedFilename = list(DownloadedFilename)
-        df = pd.DataFrame(DownloadedFilename, columns=['A','b','c'])
-        print("\n\nThisis DownloadedFilename:",DownloadedFilename,"\n\n")
-        filename = code["撥券日期(上市、上櫃日期)"]+".csv"
-        df.to_csv(filename, index=False)
-        print(f"{filename} 已成功生成！")"""
       
         if DownloadedFilename != "OTC.csv":
             # Copy the file to "OTC.csv"
@@ -120,12 +107,5 @@ for j in range(0,2):
             print(f"File '{DownloadedFilename}' copied to 'OTC.csv'.")
             print("Download completed...",downloadDir+'OTC.csv')
             os.remove(DownloadedFilename)
-
-
-            """df_csv = pd.read_csv('OTC.csv', skiprows=5,encoding='big5', index_col=0)
-            filename = code["撥券日期(上市、上櫃日期)"]+".csv"
-            df_csv.to_csv(filename,index = False)
-            print(f"{filename} 已成功生成！")
             
-            # Delete the original downloaded file"""
   
